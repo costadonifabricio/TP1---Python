@@ -3,13 +3,13 @@ def number_spiral(Y, X):
     # Si Y es mayor que X, se calcula el valor de la espiral en la posición (Y, X) de la espiral numérica.
     if Y > X:
         ans = (Y - 1) * (Y - 1)
-        # Si Y es impar, se suma X al valor de la espiral en la posición (Y, Y).
+        # Si Y es impar, se suma X al valor de la espiral.
         add = X if Y % 2 != 0 else 2 * Y - X
         return ans + add
     # Si X es mayor que Y, se calcula el valor de la espiral en la posición (Y, X) de la espiral numérica.
     else:
         ans = (X - 1) * (X - 1)
-        # Si X es par, se suma Y al valor de la espiral en la posición (X, X).
+        # Si X es par, se suma Y al valor de la espiral.
         add = Y if X % 2 == 0 else 2 * X - Y
         return ans + add    
 # Casos de prueba
